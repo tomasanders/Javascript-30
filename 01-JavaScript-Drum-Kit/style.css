@@ -1,0 +1,56 @@
+body {
+  margin: 0 auto;
+}
+
+/*wrapper div to align the content*/
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/*div to position the header and buttons div*/
+.drum-kit {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*div to position the buttons*/
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+/*style the buttons*/
+.button {
+  border: 2px white solid;
+  border-radius: 3px;
+  color: black;
+  text-shadow: white;
+  background: transparent;
+  height: 56px;
+  width: 72px;
+  margin: 8px 16px;
+  text-align: center;
+  padding: 8px;
+}
+
+.button h3 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
