@@ -36,6 +36,18 @@ body {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;;
 }
 
+.dot {
+  border: 1px black solid;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffde15;
+  position: absolute;
+  top: 49.2%;
+  left: 49.2%;
+  z-index: 3;
+}
+
 /*transform-origin makes the hand rotate around the endpoint (center)*/
 /*transition-timing-function gives it an interesting bounce when it ticks*/
 .hand {
@@ -46,12 +58,17 @@ body {
   top: 50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: all 0.5s;
+  transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.09, 1.84, 0.15, 2.36);
 }
 
 .hour-hand {}
 
-.minute-hand {}
+.minute-hand {
+  height: 4px;
+}
 
-.second-hand {}
+.second-hand {
+  background-color: red;
+  height: 2px;
+}
