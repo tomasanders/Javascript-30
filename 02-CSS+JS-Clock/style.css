@@ -15,8 +15,8 @@ body {
 }
 
 .clock-body {
-  width: 40vw;
-  height: 30vh;
+  width: 35vh;
+  height: 35vh;
   border: 5px solid black;
   border-radius: 10px;
   background-image: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
@@ -25,6 +25,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .clock-face {
@@ -62,8 +63,6 @@ body {
   transition-timing-function: cubic-bezier(0.09, 1.84, 0.15, 2.36);
 }
 
-.hour-hand {}
-
 .minute-hand {
   height: 4px;
 }
@@ -71,4 +70,26 @@ body {
 .second-hand {
   background-color: red;
   height: 2px;
+}
+
+/*styling the numbers that appear around the clock*/
+.number {
+  position: absolute;
+  color: white;
+}
+
+#twelve {
+  top: 8px;
+}
+
+#three {
+  right: 16px;
+}
+
+#six {
+  bottom: 8px;
+}
+
+#nine {
+  left: 16px;
 }
