@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://images.unsplash.com/photo-1516491575772-bab9f75948c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-body {
+  width: 40vw;
+  height: 30vh;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-image: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-face {
+  height: 25vh;
+  width: 25vh;
+  border-radius: 12.5vh;
+  background-color: #E6E6E6;
+  border: 2px #FFDE15 solid;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;;
+}
+
+/*transform-origin makes the hand rotate around the endpoint (center)*/
+/*transition-timing-function gives it an interesting bounce when it ticks*/
+.hand {
+  width: 12.5vh;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.09, 1.84, 0.15, 2.36);
+}
+
+.hour-hand {}
+
+.minute-hand {}
+
+.second-hand {}
