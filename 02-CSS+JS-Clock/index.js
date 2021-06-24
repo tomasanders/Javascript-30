@@ -1,19 +1,23 @@
 // select the elements
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.minute-hand');
+const hourHand = document.querySelector('.hour-hand');
 
 // function to tick the seconds hand of the clock
 function setDate() {
   const now = new Date();
   const seconds = now.getSeconds();
   const minutes = now.getMinutes();
+  const hours = now.getHours();
   // 360 degrees of rotation in a circle
   // we need to add 90 to the result because we originally rotated the div by 90 degrees to make it top to bottom instead of left to right
-  const secondsDegrees = ((seconds / 60) * 360 + 90);
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
   // this makes the seconds hand rotate according to the current time
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-  const minutesDegrees = ((minutes / 60) * 360 + 90);
+  const minutesDegrees = ((minutes / 60) * 360) + 90;
   minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+  const hoursDegrees = ((hours / 12) * 360) + 90;
+  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 };
 
 
