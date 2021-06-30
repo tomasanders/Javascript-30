@@ -14,13 +14,16 @@
         <div class="controls">
           <h1>Playing with CSS Variables using <span class="highlight">JavaScript</span></h1>
           <div class="controls-spacing">
-            <h2>Spacing</h2>
+            <label for="spacing">Spacing:</label>
+            <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
           </div>
           <div class="controls-blur">
-            <h2>Blur</h2>
+            <label for="blur">Blur:</label>
+            <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
           </div>
           <div class="controls-color">
-            <h2>Base Color</h2>
+            <label for="base-color">Base Color:</label>
+            <input type="color" name="base-color" value="#ffc600">
           </div>
         </div>
         <!-- end controls wrapper -->
