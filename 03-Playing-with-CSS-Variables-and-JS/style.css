@@ -16,11 +16,18 @@ h1, h2, h3, h4, h5 {
 p {
   font-family: 'PT Sans', sans-serif;
 }
+
+img {
+  width: 50vw;
+  padding: var(--spacing);
+  background-color: var(--base-color);
+  filter: blur(var(--blur));
+}
 /*end main elements*/
 
 /*root - the most base designation*/
 :root {
-  --base:  #ffc600;
+  --base-color:  #ffc600;
   --spacing: 10px;
   --blur:  10px;
 }
@@ -43,8 +50,8 @@ p {
   justify-content: center;
   align-items: center;
 }
-
-.image img {
-  width: 50vw;
-}
 /*end containers*/
+
+.highlight {
+  color: var(--base-color);
+}
