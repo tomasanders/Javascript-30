@@ -1,0 +1,50 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=VT323&display=swap');
+/*end fonts*/
+
+/*main elements*/
+/*kill the default browser style*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'VT323', monospace;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+/*end main elements*/
+
+/*root - the most base designation*/
+:root {
+  --base:  #ffc600;
+  --spacing: 10px;
+  --blur:  10px;
+}
+
+/*containers*/
+.page-wrapper {
+  background-color: #4C6295;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 50vw;
+}
+/*end containers*/
