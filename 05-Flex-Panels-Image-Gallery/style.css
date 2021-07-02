@@ -10,7 +10,6 @@ body {
 
 p {
   font-family: 'Caveat', cursive;
-  text-decoration-style: capitalize;
 }
 /*end main elements*/
 
@@ -54,4 +53,26 @@ p {
 
 .panel5 {
   background-image: url('images/nikko.jpg');
+}
+/*end panel styles*/
+
+/*flex children*/
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  font-size: 40px;
 }
