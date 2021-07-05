@@ -10,7 +10,7 @@
 }
 /*end declare variables*/
 .hl {
-  background-color: #FFFF0A;
+  text-transform: uppercase;
 }
 
 /*main elements*/
@@ -19,6 +19,7 @@ body {
 }
 p {
  font-family: 'Teko', sans-serif;
+ font-size: 1.1em;
 }
 /*end main elements*/
 
@@ -39,6 +40,15 @@ p {
   color: white;
   top:  16px;
   left:  16px;
+}
+.suggestions-container {
+  height: 80vh;
+  width:  25vw;
+  text-align: left;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  overflow: hidden;
 }
 /*end containers*/
 /*text*/
@@ -114,3 +124,19 @@ p {
   transform: translate(.0125em, 0.025em);
   opacity: 0.8;
 }
+.name {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.4em;
+  color: white;
+}
+.population {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.4em;
+  color: #3C8F2F;
+}
+/*end text*/
+/*input*/
+.search {
+  width:  20vw;
+}
+
