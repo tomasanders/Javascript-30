@@ -38,10 +38,11 @@ function displayMatches() {
     const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`)
     const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`)
     // put the results into html
+    // for population, we're first reducing the pop to 15%, stripping the decimals, then adding commas to it
     return `
       <li>
         <span class="name">${cityName}, ${stateName}</span>
-        <span class="population">${numberWithCommas(place.population)}</span>
+        <span class="population">${numberWithCommas(Math.trunc(place.population * .15))}</span>
       </li>
     `;
     // .join to change from an array into one big string
