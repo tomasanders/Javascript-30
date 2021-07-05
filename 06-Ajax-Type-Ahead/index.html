@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Type Ahead</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+      <div class="form-container">
+        <form class="search-form">
+          <input type="text" class="search" placeholder="How many survived?">
+          <ul class="suggestions">
+            <li>Filter for a city</li>
+            <li>or a state</li>
+          </ul>
+        </form>
+    </div> <!-- end form-container -->
+  </div> <!-- end wrapper -->
+  <div class="end-message">
+    <!-- use the spans to create the broken effect -->
+    <!-- the aria-hidden makes the extra spans not show up for screen readers -->
+    <h1 class="glitch"><span aria-hidden="true">The Calamity</span>The Calamity<span aria-hidden="true">The Calamity</span></h1>
+    <p>In the year 2020, a global pandemic led to the downfall of civilization. This tool was created to help find the survivors.</p>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>

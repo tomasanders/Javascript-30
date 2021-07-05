@@ -1,0 +1,116 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+/*end import fonts*/
+/*declare variables*/
+:root {
+--red: rgba(255,0,0,.75);
+--yellow: rgba(254,224,0,.75);
+--green: rgba(101,240,0,.75);
+}
+/*end declare variables*/
+.hl {
+  background-color: #FFFF0A;
+}
+
+/*main elements*/
+body {
+  margin: 0;
+}
+p {
+ font-family: 'Teko', sans-serif;
+}
+/*end main elements*/
+
+/*containers*/
+.wrapper {
+  height:  100vh;
+  width:  100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1599689018034-48e2ead82951?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.end-message {
+  position:  absolute;
+  color: white;
+  top:  16px;
+  left:  16px;
+}
+/*end containers*/
+/*text*/
+.glitch {
+  font-family: 'Orbitron', sans-serif;
+  font-size:  3.5rem;
+  font-weight:  700;
+  text-transform:  uppercase;
+  position:  relative;
+  text-shadow:
+    0.05em 0 0 var(--red),
+    -0.025em -0.05em 0 var(--green),
+    0.05em 0.05em 0 var(--yellow);
+
+  animation:  glitch 500ms infinite;
+}
+
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 var(--red),
+    -0.025em -0.05em 0 var(--green),
+    0.05em 0.05em 0 var(--yellow);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 var(--red),
+    -0.025em -0.05em 0 var(--green),
+    0.05em 0.05em 0 var(--yellow);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 var(--red),
+    0.025em 0.025em 0 var(--green),
+    -0.05em -0.05em 0 var(--yellow);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 var(--red),
+    0.025em 0.025em 0 var(--green),
+    -0.05em -0.05em 0 var(--yellow);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 var(--red),
+    0.05em 0 0 var(--green),
+    0 -0.05em 0 var(--yellow);
+  }
+  79% {
+    text-shadow: 0.025em 0.05em 0 var(--red),
+    0.05em 0 0 var(--green),
+    0 -0.05em 0 var(--yellow);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 var(--red),
+    -0.025em -0.025em 0 var(--green),
+    -0.025em -0.05em 0 var(--yellow);
+  }
+}
+
+.glitch span {
+  position:  absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 600ms;
+  clip-path: polygon(0 20%, 100% 5%, 100% 45%, 0 45%);
+  transform: translate(-.075em, 0.0125em);
+  opacity: 0.6;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(.0125em, 0.025em);
+  opacity: 0.8;
+}
