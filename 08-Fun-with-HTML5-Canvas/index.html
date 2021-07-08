@@ -8,19 +8,39 @@
   <canvas id="draw" width="800" height="800"></canvas>
 
 <script>
+  const canvas = document.querySelector('#draw');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.strokeStyle = '#BADA55';
+  ctx.lineJoin = 'bevel';
+  ctx.lineCap = 'butt';
 
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  function draw(event) {
+    if(!isDrawing) return; // stop the fn from running when they aren't moused down
+    console.log(event);
+  };
+
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mousedown', () => isDrawing = true);
+  canvas.addEventListener('mouseup', () => isDrawing = false);
+  canvas.addEventListener('mouseout', () => isDrawing = false);
 
 </script>
 
 
 
 <style>
-
-
-</style>
   html, body {
     margin: 0;
   }
+
+
+</style>
 
 
 </body>
